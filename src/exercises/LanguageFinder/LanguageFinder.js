@@ -15,9 +15,9 @@ function LanguageFinder() {
    * findLanguages(search) will return a promise that resolves to a list of languages matching the search (string).
    * there is some randomness in how fast findLanguages will resolve.
    */
-  const search = ''
-  const setSearch = () => {};
-  const languages = [];
+  const search = '' // this will hold the current search value
+  const setSearch = () => {}; // callback for setting the search value
+  const languages = []; // this should hold the list that was returned from the API
 
   return (
     <div>
