@@ -17,7 +17,8 @@ You will also see any lint errors in the console.
 
 ## Select an exercise
 
-Select an exercise to import in `./src/App.js`.
+You can find a few exercises in `./src/exercise`.
+Adjust the import in `./src/App.js` to point to the exercise you want.
 
 In the project directory, you can run:
 
@@ -40,6 +41,4 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Learn more about hooks [React Hooks Reference](https://reactjs.org/docs/hooks-reference.html)

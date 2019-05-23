@@ -2,7 +2,7 @@ import React from 'react';
 
 function useCounter(initialCount) {
   /*
-   * fill in the stuff
+   * This could be implemented with useState
    **/
 
   return {
