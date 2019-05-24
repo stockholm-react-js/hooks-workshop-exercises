@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Exercise from './exercises/0';
+import Exercise from './exercises/NotAnExercise';
 import logo from './logo.svg';
 import './App.css';
 
