@@ -9,8 +9,7 @@ function LanguageList({ languages }) {
   );
 }
 
-function LanguageFinder() {
-  const [search, setSearch] = useState('');
+function useLanguageFinder(search) {
   const [languages, setLanguages] = useState([]);
 
   useEffect(() => {
@@ -22,6 +21,12 @@ function LanguageFinder() {
     });
     return () => { isCancelled = true };
   }, [search]);
+  return languages
+}
+
+function LanguageFinder() {
+  const [search, setSearch] = useState('');
+  const languages = useLanguageFinder(search);
 
   return (
     <div>
