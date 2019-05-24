@@ -1,17 +1,16 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 function useWindowSize() {
-  /*
-   * This hook should track and return the current window size as an {x, y} object.
-   * It can be achivied by a combination of useState an useEffect.
-   * The window size could be tracked by adding an eventlistener to the resize event.
-   * Don't forget to clean up the listener.
-   */
+  const [size, setSize] = useState({ x: window.innerWidth, y: window.innerHeight })
+    useEffect(() => {
+      const handleResize = () => { setSize({ x: window.innerWidth, y: window.innerHeight  }) };
 
-  return {
-    x: window.innerWidth, // replace this with the tracked window width
-    y: window.innerHeight, // replace this with the tracked` window height
-  };
+      window.addEventListener('resize', handleResize);
+
+      return () => { window.removeEventListener('resize', handleResize) };
+  }, [setSize])
+
+  return size;
 }
 
 function WindowSize() {

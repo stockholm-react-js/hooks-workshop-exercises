@@ -10,14 +10,18 @@ function LanguageList({ languages }) {
 }
 
 function LanguageFinder() {
-  /*
-   * can be implemented with useState and useEffect
-   * findLanguages(search) will return a promise that resolves to a list of languages matching the search (string).
-   * there is some randomness in how fast findLanguages will resolve.
-   */
-  const search = '' // this will hold the current search value
-  const setSearch = () => {}; // callback for setting the search value
-  const languages = []; // this should hold the list that was returned from the API
+  const [search, setSearch] = useState('');
+  const [languages, setLanguages] = useState([]);
+
+  useEffect(() => {
+    let isCancelled = false;
+    findLanguages(search).then(result => {
+      if (!isCancelled) {
+        setLanguages(result);
+      }
+    });
+    return () => { isCancelled = true };
+  }, [search]);
 
   return (
     <div>
