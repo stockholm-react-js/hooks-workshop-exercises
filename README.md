@@ -25,3 +25,7 @@ In the project directory, you can run:
 ## Learn More
 
 Learn more about hooks [React Hooks Reference](https://reactjs.org/docs/hooks-reference.html)
+
+## Solutions
+
+Check the [`solutions` branch](https://github.com/stockholm-react-js/hooks-workshop-exercises/tree/solutions) for examples of how these exercises can be solved.
